@@ -1,0 +1,203 @@
+@color: @color;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (min-width:321rem) and (max-width:375rem){html{font-size:11rem}}
+@media screen and (min-width:376rem) and (max-width:414rem){html{font-size:12rem}}
+@media screen and (min-width:415rem) and (max-width:639rem){html{font-size:15rem}}
+@media screen and (min-width:640rem) and (max-width:719rem){html{font-size:20rem}}
+@media screen and (min-width:720rem) and (max-width:749rem){html{font-size:22.5rem}}
+@media screen and (min-width:750rem) and (max-width:799rem){html{font-size:23.5rem}}
+@media screen and (min-width:800rem){html{font-size:25rem}}
+
+p {
+    color: @color;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    background: url(../img/backimg.jpg) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+#topPart {
+    height: 42%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.head {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 80%;
+    width: 100%;
+}
+
+#bottomPart {
+    background: rgba(0, 51, 119, 0.5);
+    width: 100%;
+    height: 58%;
+    position: absolute;
+    top: 42%;
+}
+
+.bottom {
+    .head;
+}
+
+.weather {
+    color: @color;
+    margin-top: 0.6rem;
+    border-radius: 1.25rem;
+    background: rgba(136, 136, 136, 0.5);
+}
+
+.temp {
+    color: @color;
+}
+
+.place {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.place p {
+    font-size: 1.25rem;
+}
+
+#date {
+    .place;
+    color: @color;
+    font-size: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+#tdweather {
+    margin: 0 auto;
+    position: relative;
+    width: 15rem;
+}
+
+#tdweather img {
+
+    animation: cloudmove 1s linear infinite alternate;
+}
+
+@keyframes cloudmove {
+    from {}
+    to {
+        transform: translateY(0.5rem);
+    }
+}
+
+#tdtemp {
+    .place;
+    color: @color;
+    width: 6rem;
+    font-size: 4rem;
+}
+
+#todaywt {
+    color: @color;
+    width: 2rem;
+    display: inline-block;
+    float: right;
+    margin-top: 3.8rem;
+}
+
+#maybe {
+    .place;
+    margin-top: 1rem;
+    color: @color;
+    width: 100%;
+}
+
+.others {
+    margin: 0 5rem;
+    display: inline-block;
+}
+
+.inothers {
+    font-size: 1rem;
+}
+
+#thisweek {
+    .place;
+    border: solid 0.05rem @color;
+    border-radius: 1.25rem;
+    width: 9rem;
+    box-shadow: 0 0 0.25rem @color;
+
+    p {
+        padding: 0.4rem 0;
+    }
+}
+
+.week {
+    .place;
+    width: 3rem;
+    margin: 0 1.25rem;
+    font-size: 0.8rem;
+}
+
+#oneweek {
+    .place;
+    width: 41rem;
+    margin-top: 2rem;
+    img {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+#paint {
+    margin: 0 auto;
+    width: 35rem;
+    height: 2rem;
+}
+
+#canvas {
+    width: 35rem;
+    height: 8rem;
+    margin-top: -3rem;
+}
+
+.maxtemp {
+    .place;
+    width: 41rem;
+    margin-top: 0.5rem;
+}
+
+.mintemp {
+    .maxtemp
+}
+
+.max {
+    .place;
+    font-size: 0.5rem;
+    width: 3rem;
+    margin: 0 1.25rem;
+    color: @color;
+}
+
+.min {
+    .max;
+}
